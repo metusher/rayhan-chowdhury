@@ -64,13 +64,18 @@ body {
     margin: 10px 0;
 }
 
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
 @media (max-width: 600px) {
-    .video-container iframe {
-        width: 100%;
-        height: auto;
-    }
     .menu ul li {
         display: block;
         margin: 10px 0;
+    }
+    .video-container iframe {
+        height: auto;
     }
 }
