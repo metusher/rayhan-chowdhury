@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Rayhan Chowdhury - Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Updated to match your file name -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <nav class="menu">
-            <ul>
+            <div class="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
+            <ul class="menu-items">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -70,4 +71,38 @@
                 <li>1st Runner-up – Truss Challenge, Civilization 2024 (DUET) (Among 105 teams)</li>
             </ul>
             <div class="video-container">
-                <iframe width="560" height="315" src="https
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="section" id="courses">
+            <h2>Courses & Training</h2>
+            <ul>
+                <li>Structural Engineering Abaqus Tutorial – Udemy</li>
+                <li>Research Paper Writing Course – Amar ischool</li>
+                <li>Building Design in ETABS – DDS</li>
+                <li>Explosion Simulation in Abaqus – Udemy</li>
+                <li>ETABS Advanced Course: 15-Storey Building – Building Engineering and Construction</li>
+            </ul>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="section" id="research">
+            <h2>Research Statement</h2>
+            <p>My research focuses on leveraging data-driven approaches, particularly Deep Neural Networks, to predict seismic drift responses and enhance structural health monitoring. I aim to contribute to resilient infrastructure design through advanced computational techniques.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for hamburger menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu-items').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
