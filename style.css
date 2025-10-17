@@ -15,26 +15,36 @@ body {
 .menu {
     background-color: #2c3e50;
     padding: 10px 0;
+    position: relative;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hidden by default on desktop */
+    padding: 10px;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     text-align: center;
 }
 
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.menu ul li {
+.menu-items li {
     display: inline;
     margin: 0 15px;
 }
 
-.menu ul li a {
+.menu-items li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.menu ul li a:hover {
+.menu-items li a:hover {
     color: #3498db;
 }
 
@@ -70,8 +80,24 @@ body {
     height: 315px;
 }
 
+/* Mobile View (Hamburger Menu) */
 @media (max-width: 600px) {
-    .menu ul li {
+    .menu-toggle {
+        display: block; /* Show hamburger icon on mobile */
+    }
+    .menu-items {
+        display: none; /* Hide menu items by default on mobile */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #2c3e50;
+        padding: 10px 0;
+    }
+    .menu-items.active {
+        display: block; /* Show menu items when active */
+    }
+    .menu-items li {
         display: block;
         margin: 10px 0;
     }
