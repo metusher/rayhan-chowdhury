@@ -7,22 +7,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
+  <nav>
+    <div class="logo">Md. Rayhan Chowdhury</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
     <div class="header-content">
-      <h1 id="name">Md. Rayhan Chowdhury</h1>
-      <p id="subtitle">PhD Candidate | Civil Engineering</p>
-      <a href="cv.pdf" class="btn">Download CV</a>
+      <h1>Hi, I'm Md. Rayhan Chowdhury</h1>
+      <p class="title">PhD Candidate | Civil Engineering</p>
+      <p class="description">
+        Specializing in Structural Health Monitoring & Seismic Risk Analysis using Abaqus, OpenSeesPy, and Machine Learning.
+      </p>
+      <div class="buttons">
+        <a href="cv.pdf" class="btn">Download CV</a>
+        <a href="mailto:rayhansec@gmail.com" class="btn secondary">Let's Talk</a>
+      </div>
     </div>
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <h2>About Me</h2>
     <p>
-      I am Md. Rayhan Chowdhury, a PhD candidate specializing in Structural Health Monitoring & Seismic Risk Analysis. My research leverages tools like Abaqus, OpenSeesPy, and Machine Learning to enhance infrastructure resilience.
+      I am a PhD candidate focused on advancing infrastructure resilience through innovative research in Structural Health Monitoring and Seismic Risk Analysis.
     </p>
   </section>
 
-  <section class="skills">
+  <section class="skills" id="skills">
     <h2>Skills</h2>
     <ul>
       <li>Abaqus</li>
@@ -34,8 +51,8 @@
     </ul>
   </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
+  <section class="projects" id="education">
+    <h2>Research</h2>
     <div class="project-card">
       <img src="project1.jpg" alt="Seismic Drift Prediction Project">
       <h3>Seismic Drift Prediction</h3>
@@ -43,18 +60,13 @@
     </div>
   </section>
 
-  <section class="research">
-    <h2>Research Statement</h2>
-    <p>
-      My PhD research focuses on advancing Structural Health Monitoring and Seismic Risk Analysis, developing innovative computational methods to assess and improve seismic performance of civil structures.
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 Md. Rayhan Chowdhury | Connect: 
-      <a href="mailto:rayhansec@gmail.com">rayhansec@gmail.com</a> | 
-      <a href="https://www.linkedin.com/in/md-rayhan-chowdhury-59011a368/">LinkedIn</a>
-    </p>
+  <footer id="contact">
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="https://youtube.com"><img src="youtube-icon.png" alt="YouTube"></a>
+      <a href="https://linkedin.com"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+    </div>
+    <p>© 2025 Md. Rayhan Chowdhury</p>
   </footer>
 
   <script src="script.js"></script>
