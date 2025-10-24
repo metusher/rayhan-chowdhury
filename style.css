@@ -43,24 +43,18 @@ body {
 
 .pdf-preview iframe {
     border: none;
+    width: 100%;
+    height: 600px; /* SAME HEIGHT for all PDFs */
 }
 
-/* Specific PDF Sizes */
-.pdf-preview.a4 iframe {
-    width: 421px;
-    height: 595px;
-}
-
+/* Landscape PDF aspect ratio (optional, to avoid distortion) */
 .pdf-preview.a3 iframe {
-    width: 842px;
-    height: 595px; /* Landscape */
+    aspect-ratio: 842 / 595;
 }
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .pdf-preview.a4 iframe,
-    .pdf-preview.a3 iframe {
-        width: 100%;
+    .pdf-preview iframe {
         height: auto;
     }
 }
