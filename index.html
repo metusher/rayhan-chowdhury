@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Rayhan Chowdhury - Portfolio</title>
+    <title>Md. Rayhan Chowdhury - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,10 +14,10 @@
             <h1 class="logo">Md. Rayhan Chowdhury</h1>
             <div class="menu-toggle">☰</div>
             <ul class="menu-items">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -27,7 +27,7 @@
         <h2>Structural Engineer | Researcher | B.Sc. Civil Engineering</h2>
     </header>
 
-    <!-- About -->
+    <!-- About Me -->
     <section id="about" class="section">
         <h2>About Me</h2>
         <p>I am a Civil Engineering graduate from Sylhet Engineering College with a CGPA of 3.76/4.00. I specialize in structural engineering, seismic response prediction, and data-driven modeling using Abaqus and Python.</p>
@@ -36,54 +36,13 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="pdf-gallery">
-            <div class="pdf-preview">
-                <h4>Design Calculations </h4>
-                <iframe id="scrolling-pdf" src="2A.Design_Report_0352 MODIFIED.pdf"></iframe>
-                <p><a href="2A.Design_Report_0352 MODIFIED.pdf" target="_blank" download>Download PDF</a></p>
-            </div>
-            <div class="pdf-preview">
-                <h4>Structural Drawings </h4>
-                <iframe src="3.Detail structural and foundation design drawings _0352.pdf"></iframe>
-                <p><a href="3.Detail structural and foundation design drawings _0352.pdf" target="_blank" download>Download PDF</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research -->
-    <section id="research" class="section">
-        <h2>Research Statement</h2>
-        <p>My research focuses on data-driven approaches, particularly Deep Neural Networks, to predict seismic drift responses and enhance structural health monitoring.</p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">My LinkedIn Profile</a></p>
-    </section>
-
     <script>
-        // Hamburger Menu
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu-items');
         toggle.addEventListener('click', () => {
             menu.classList.toggle('active');
         });
-
-        // Auto-scroll first PDF smoothly
-        const pdfFrame = document.getElementById('scrolling-pdf');
-        pdfFrame.onload = function() {
-            let y = 0;
-            setInterval(() => {
-                pdfFrame.contentWindow.scrollTo(0, y);
-                y += 1; // adjust speed
-                if (y > pdfFrame.contentDocument.body.scrollHeight) y = 0;
-            }, 30);
-        };
     </script>
+
 </body>
 </html>
