@@ -8,13 +8,14 @@
 </head>
 <body>
 
+    <!-- Navigation Menu -->
     <nav class="menu">
         <div class="menu-container">
             <h1 class="logo">Md. Rayhan Chowdhury</h1>
             <div class="menu-toggle">☰</div>
             <ul class="menu-items">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="awards.html">Awards</a></li>
                 <li><a href="research.html">Research</a></li>
@@ -23,33 +24,57 @@
         </div>
     </nav>
 
+    <!-- Header -->
     <header class="header">
         <h2>Projects</h2>
     </header>
 
+    <!-- Projects Section -->
     <section id="projects" class="section">
-        <div class="pdf-gallery">
-            <div class="pdf-preview">
-                <h4>Design Calculations (A4 Portrait)</h4>
-                <iframe id="scrolling-pdf" src="2A.Design_Report_0352 MODIFIED.pdf"></iframe>
-                <p><a href="2A.Design_Report_0352 MODIFIED.pdf" target="_blank" download>Download PDF</a></p>
-            </div>
-            <div class="pdf-preview">
-                <h4>Structural Drawings (A3 Landscape)</h4>
-                <iframe src="3.Detail structural and foundation design drawings _0352.pdf"></iframe>
-                <p><a href="3.Detail structural and foundation design drawings _0352.pdf" target="_blank" download>Download PDF</a></p>
+
+        <!-- Project 1: GPH Ispat -->
+        <div class="project-card">
+            <h3>GPH Ispat Project</h3>
+            <p>This project was part of the GPH Ispat-Prothom Alo Structural Engineering Competition. We designed a G+7 story building focusing on seismic response prediction and structural safety. The project includes full design calculations and structural drawings.</p>
+            
+            <div class="pdf-gallery">
+                <div class="pdf-preview">
+                    <h4>Design Calculations (A4 Portrait)</h4>
+                    <iframe id="scrolling-pdf" src="2A.Design_Report_0352 MODIFIED.pdf"></iframe>
+                    <p><a href="2A.Design_Report_0352 MODIFIED.pdf" target="_blank" download>Download PDF</a></p>
+                </div>
+                <div class="pdf-preview">
+                    <h4>Structural Drawings (A3 Landscape)</h4>
+                    <iframe src="3.Detail structural and foundation design drawings _0352.pdf"></iframe>
+                    <p><a href="3.Detail structural and foundation design drawings _0352.pdf" target="_blank" download>Download PDF</a></p>
+                </div>
             </div>
         </div>
+
+        <!-- Project 2: Truss Competition -->
+        <div class="project-card">
+            <h3>Truss Competition Project</h3>
+            <p>I participated in a national-level Truss Competition and became the champion. This project demonstrates the design, assembly, and load testing of the truss. Emphasis was given on lightweight material selection and optimal structural performance.</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/YOUR_TRUSS_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Add more projects below as needed -->
+        <!-- Copy the structure: <div class="project-card">...</div> -->
     </section>
 
+    <!-- JavaScript for menu toggle and PDF auto-scroll -->
     <script>
+        // Menu toggle
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu-items');
         toggle.addEventListener('click', () => {
             menu.classList.toggle('active');
         });
 
-        // Auto-scroll first PDF
+        // Auto-scroll for first PDF (GPH Ispat)
         const pdfFrame = document.getElementById('scrolling-pdf');
         pdfFrame.onload = function() {
             let y = 0;
