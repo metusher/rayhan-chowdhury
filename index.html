@@ -7,44 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Menu -->
+
+    <!-- Navigation -->
     <nav class="menu">
-        <h2 class="logo">Md. Rayhan Chowdhury</h2>
-        <div class="menu-toggle">☰</div>
-        <ul class="menu-items">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="menu-container">
+            <h1 class="logo">Md. Rayhan Chowdhury</h1>
+            <div class="menu-toggle">☰</div>
+            <ul class="menu-items">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Header -->
     <header class="header">
-        <p>Structural Engineer | Researcher | B.Sc. Civil Engineering</p>
+        <h2>Structural Engineer | Researcher | B.Sc. Civil Engineering</h2>
     </header>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>I am a dedicated Civil Engineering graduate from Sylhet Engineering College (affiliated with Shahjalal University of Science & Technology), with a CGPA of 3.76/4.00. I specialize in structural engineering, seismic response prediction, and data-driven modeling using tools like Abaqus and Python.</p>
+        <p>I am a Civil Engineering graduate from Sylhet Engineering College with a CGPA of 3.76/4.00. I specialize in structural engineering, seismic response prediction, and data-driven modeling using Abaqus and Python.</p>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="section">
         <h2>Projects</h2>
         <div class="pdf-gallery">
-            <!-- PDF 1 -->
             <div class="pdf-preview">
                 <h4>Design Calculations (A4 Portrait)</h4>
                 <iframe id="scrolling-pdf" src="2A.Design_Report_0352 MODIFIED.pdf"></iframe>
                 <p><a href="2A.Design_Report_0352 MODIFIED.pdf" target="_blank" download>Download PDF</a></p>
             </div>
-
-            <!-- PDF 2 -->
             <div class="pdf-preview">
                 <h4>Structural Drawings (A3 Landscape)</h4>
                 <iframe src="3.Detail structural and foundation design drawings _0352.pdf"></iframe>
@@ -53,13 +53,13 @@
         </div>
     </section>
 
-    <!-- Research Section -->
+    <!-- Research -->
     <section id="research" class="section">
         <h2>Research Statement</h2>
-        <p>My research focuses on leveraging data-driven approaches, particularly Deep Neural Networks, to predict seismic drift responses and enhance structural health monitoring.</p>
+        <p>My research focuses on data-driven approaches, particularly Deep Neural Networks, to predict seismic drift responses and enhance structural health monitoring.</p>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="section">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
@@ -74,12 +74,15 @@
             menu.classList.toggle('active');
         });
 
-        // Auto-scroll for first PDF
+        // Auto-scroll first PDF smoothly
         const pdfFrame = document.getElementById('scrolling-pdf');
         pdfFrame.onload = function() {
+            let y = 0;
             setInterval(() => {
-                pdfFrame.contentWindow.scrollBy(0, 1);
-            }, 50); // scroll speed adjustable
+                pdfFrame.contentWindow.scrollTo(0, y);
+                y += 1; // adjust speed
+                if (y > pdfFrame.contentDocument.body.scrollHeight) y = 0;
+            }, 30);
         };
     </script>
 </body>
