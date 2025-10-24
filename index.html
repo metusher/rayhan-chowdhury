@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Rayhan Chowdhury - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation Menu -->
     <nav class="menu">
         <div class="menu-container">
             <h1 class="logo">Md. Rayhan Chowdhury</h1>
             <div class="menu-toggle">☰</div>
             <ul class="menu-items">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="awards.html">Awards</a></li>
@@ -30,15 +30,16 @@
         <h2>Structural Engineer | Researcher | B.Sc. Civil Engineering</h2>
     </header>
 
-    <!-- About Me -->
+    <!-- About Me Section -->
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>I am a Civil Engineering graduate from Sylhet Engineering College with a CGPA of 3.76/4.00. I specialize in structural engineering, seismic response prediction, and data-driven modeling using Abaqus and Python.</p>
+        <p>I am a Civil Engineering graduate from Sylhet Engineering College (affiliated with SUST) with a CGPA of 3.76/4.00. I specialize in structural engineering, seismic response prediction, and data-driven modeling using Abaqus and Python.</p>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
+    <!-- JavaScript for menu toggle -->
     <script>
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu-items');
