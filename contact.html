@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Rayhan Chowdhury - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav class="menu">
+        <div class="menu-container">
+            <h1 class="logo">Md. Rayhan Chowdhury</h1>
+            <div class="menu-toggle">☰</div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h2>Contact Me</h2>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile" target="_blank">https://www.linkedin.com/in/your-profile</a></p>
+        <p><strong>Phone:</strong> +880-XXXXXXXXXX</p>
+        <p><strong>Location:</strong> Dhaka, Bangladesh</p>
+    </section>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu-items');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
