@@ -6,38 +6,31 @@
     <meta name="description" content="Portfolio of Md. Rayhan Chowdhury, Structural Engineer and Researcher specializing in seismic response prediction and data-driven modeling.">
     <meta name="keywords" content="structural engineering, civil engineering, seismic analysis, Python, Abaqus">
     <meta name="author" content="Md. Rayhan Chowdhury">
-    <meta property="og:title" content="Md. Rayhan Chowdhury - Portfolio">
-    <meta property="og:description" content="Explore the portfolio of Md. Rayhan Chowdhury, a Civil Engineering graduate specializing in structural engineering and seismic response prediction.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-website-url.com">
     <title>Md. Rayhan Chowdhury - Portfolio</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Menu -->
+    <!-- Fixed Navigation Menu -->
     <nav class="menu" role="navigation" aria-label="Main navigation">
-        <div class="menu-container">
-            <h2 class="logo">Md. Rayhan Chowdhury</h2>
-            <div class="menu-toggle" aria-label="Toggle navigation menu">☰</div>
-            <ul class="menu-items">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+        <ul class="menu-items">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Header -->
-    <header class="header" role="banner">
+    <!-- Header: Name and Intro -->
+    <header class="header">
+        <h1>Md. Rayhan Chowdhury</h1>
         <p>Structural Engineer | Researcher | B.Sc. Civil Engineering</p>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="section" role="region" aria-labelledby="about-heading">
-        <h2 id="about-heading">About Me</h2>
+    <section id="about" class="section">
+        <h2>About Me</h2>
         <p>I am a dedicated Civil Engineering graduate from Sylhet Engineering College (affiliated with Shahjalal University of Science & Technology), with a CGPA of 3.76/4.00. I specialize in structural engineering, seismic response prediction, and data-driven modeling using tools like Abaqus and Python.</p>
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Introduction Video" loading="lazy" frameborder="0" allowfullscreen></iframe>
@@ -45,50 +38,55 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section" role="region" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projects</h2>
-        <p><strong>Title:</strong> G+07 Story Building – GPH Ispat-Prothom Alo En-genus Structural Engineering Competition</p>
+    <section id="projects" class="section">
+        <h2>Projects</h2>
 
-        <div class="pdf-gallery">
-            <!-- A4 Portrait PDF -->
-            <div class="pdf-preview a4">
-                <h4>Design Calculations (A4 Portrait)</h4>
-                <p>Comprehensive calculations for G+07 Story Building.</p>
-                <iframe src="2A.Design_Report_0352 MODIFIED.pdf" loading="lazy" title="Design Calculations PDF"></iframe>
-                <p><a href="2A.Design_Report_0352 MODIFIED.pdf" target="_blank" download>Download PDF</a></p>
-            </div>
+        <!-- Project 1 -->
+        <div class="project">
+            <h3>G+07 Story Building – GPH Ispat-Prothom Alo En-genus Structural Engineering Competition</h3>
+            <div class="pdf-gallery">
+                <!-- First PDF: Auto Scroll -->
+                <div class="pdf-preview a4">
+                    <h4>Design Calculations (A4 Portrait)</h4>
+                    <iframe id="scrolling-pdf" src="2A.Design_Report_0352 MODIFIED.pdf" loading="lazy" title="Design Calculations PDF"></iframe>
+                    <p><a href="2A.Design_Report_0352 MODIFIED.pdf" target="_blank" download>Download PDF</a></p>
+                </div>
 
-            <!-- A3 Landscape PDF -->
-            <div class="pdf-preview a3">
-                <h4>Structural Drawings (A3 Landscape)</h4>
-                <p>Full structural and foundation design drawings for the project.</p>
-                <iframe src="3.Detail structural and foundation design drawings _0352.pdf" loading="lazy" title="Structural Drawings PDF"></iframe>
-                <p><a href="3.Detail structural and foundation design drawings _0352.pdf" target="_blank" download>Download PDF</a></p>
+                <!-- Second PDF -->
+                <div class="pdf-preview a3">
+                    <h4>Structural Drawings (A3 Landscape)</h4>
+                    <iframe src="3.Detail structural and foundation design drawings _0352.pdf" loading="lazy" title="Structural Drawings PDF"></iframe>
+                    <p><a href="3.Detail structural and foundation design drawings _0352.pdf" target="_blank" download>Download PDF</a></p>
+                </div>
             </div>
         </div>
+
+        <!-- Future projects can be added here -->
     </section>
 
     <!-- Research Section -->
-    <section id="research" class="section" role="region" aria-labelledby="research-heading">
-        <h2 id="research-heading">Research Statement</h2>
+    <section id="research" class="section">
+        <h2>Research Statement</h2>
         <p>My research focuses on leveraging data-driven approaches, particularly Deep Neural Networks, to predict seismic drift responses and enhance structural health monitoring. I aim to contribute to resilient infrastructure design through advanced computational techniques.</p>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section" role="region" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact Me</h2>
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
         <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">My LinkedIn Profile</a></p>
     </section>
 
+    <!-- JS for Menu & Auto Scroll -->
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menuItems = document.querySelector('.menu-items');
-        if (menuToggle && menuItems) {
-            menuToggle.addEventListener('click', () => {
-                menuItems.classList.toggle('active');
-            });
-        }
+        // Auto scroll for first PDF
+        const pdfFrame = document.getElementById('scrolling-pdf');
+        pdfFrame.onload = function() {
+            pdfFrame.contentWindow.scrollBy(0, 1); // start tiny scroll
+            setInterval(() => {
+                pdfFrame.contentWindow.scrollBy(0, 1); // scroll down 1px
+            }, 50); // adjust speed
+        };
     </script>
 </body>
 </html>
