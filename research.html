@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Rayhan Chowdhury - Research</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="menu-container">
+            <h1 class="logo">Md. Rayhan Chowdhury</h1>
+            <div class="menu-toggle">☰</div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h2>Research Statement</h2>
+    </header>
+
+    <section id="research" class="section">
+        <p>My research focuses on data-driven approaches, particularly Deep Neural Networks, to predict seismic drift responses and enhance structural health monitoring.</p>
+    </section>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu-items');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
