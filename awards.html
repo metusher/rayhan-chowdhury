@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Rayhan Chowdhury - Awards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="menu-container">
+            <h1 class="logo">Md. Rayhan Chowdhury</h1>
+            <div class="menu-toggle">☰</div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h2>Awards</h2>
+    </header>
+
+    <section id="awards" class="section">
+        <ul>
+            <li>Best Project Design Award – GPH Ispat-Prothom Alo Competition</li>
+            <li>CGPA 3.76/4.00 – Sylhet Engineering College</li>
+            <li>Outstanding Research Paper Presentation – University Symposium</li>
+        </ul>
+    </section>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu-items');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
