@@ -8,24 +8,25 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- Navigation Menu -->
         <nav class="menu">
-            <div class="menu-toggle">☰</div> <!-- Hamburger icon -->
+            <div class="menu-toggle">☰</div>
             <ul class="menu-items">
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#competitions">Competitions</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#research">Research Statement</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#research">Research</a></li>
             </ul>
         </nav>
 
+        <!-- Header -->
         <div class="header">
             <h1>Md. Rayhan Chowdhury</h1>
             <p>Structural Engineer | Researcher | B.Sc. Civil Engineering</p>
         </div>
 
+        <!-- About Me -->
         <div class="section" id="about">
             <h2>About Me</h2>
             <p>I am a dedicated Civil Engineering graduate from Sylhet Engineering College (affiliated with Shahjalal University of Science & Technology), with a CGPA of 3.76/4.00. I specialize in structural engineering, seismic response prediction, and data-driven modeling using tools like Abaqus and Python.</p>
@@ -34,11 +35,29 @@
             </div>
         </div>
 
-        <div class="section" id="education">
-            <h2>Education</h2>
-            <p><strong>B.Sc. in Civil Engineering</strong><br>Jan 2020 - June 2025<br>Sylhet Engineering College (affiliated with Shahjalal University of Science & Technology)<br>CGPA: 3.76/4.00</p>
+        <!-- Projects -->
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Undergraduate Thesis:</strong> Data-Driven Prediction of Seismic Drift Responses Using Deep Neural Networks (DNNs)</li>
+                <li><strong>Structural Design Project:</strong> G+07 Story Building – GPH Ispat-Prothom Alo En-genus Structural Engineering Competition</li>
+            </ul>
+
+            <h3>Project Files (PDF)</h3>
+            <ul>
+                <li><a href="project1.pdf" target="_blank">📄 Project 1: Seismic Drift Prediction Report</a></li>
+                <li><a href="project2.pdf" target="_blank">📄 Project 2: Building Structural Design</a></li>
+            </ul>
+
+            <!-- Later you can add your project videos below -->
+            <!--
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+            -->
         </div>
 
+        <!-- Skills -->
         <div class="section" id="skills">
             <h2>Skills</h2>
             <ul>
@@ -46,60 +65,18 @@
                 <li>Programming & Data Analysis: Python, Machine Learning (Data-Driven Modeling)</li>
                 <li>Structural Analysis: Time History Analysis, Seismic Response Prediction, Structural Health Monitoring</li>
             </ul>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
         </div>
 
-        <div class="section" id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Undergraduate Thesis:</strong> Data-Driven Prediction of Seismic Drift Responses Using Deep Neural Networks (DNNs)</li>
-                <li><strong>Project:</strong> Structural design of G+07 Story building in GPH Ispat-Prothom Alo En-genus Structural Engineering Competition</li>
-            </ul>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="section" id="competitions">
-            <h2>Academic & Technical Competitions</h2>
-            <ul>
-                <li>12th Place – GPH Ispat-Prothom Alo En-genus Structural Engineering Competition (Among 188 teams)</li>
-                <li>Champion – Game of Trusses, Cennovation 2023 (Islamic University of Technology) (Among 98 teams)</li>
-                <li>1st Runner-up – Game of Trusses, Cennovation 2024 (IUT) (Among 78 teams)</li>
-                <li>1st Runner-up – Truss Challenge, Civilization 2024 (DUET) (Among 105 teams)</li>
-            </ul>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="section" id="courses">
-            <h2>Courses & Training</h2>
-            <ul>
-                <li>Structural Engineering Abaqus Tutorial – Udemy</li>
-                <li>Research Paper Writing Course – Amar ischool</li>
-                <li>Building Design in ETABS – DDS</li>
-                <li>Explosion Simulation in Abaqus – Udemy</li>
-                <li>ETABS Advanced Course: 15-Storey Building – Building Engineering and Construction</li>
-            </ul>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
+        <!-- Research -->
         <div class="section" id="research">
             <h2>Research Statement</h2>
             <p>My research focuses on leveraging data-driven approaches, particularly Deep Neural Networks, to predict seismic drift responses and enhance structural health monitoring. I aim to contribute to resilient infrastructure design through advanced computational techniques.</p>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
         </div>
+
     </div>
 
     <script>
-        // JavaScript for hamburger menu toggle
+        // Hamburger menu toggle
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.menu-items').classList.toggle('active');
         });
