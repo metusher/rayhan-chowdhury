@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Rayhan Chowdhury - Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="menu-container">
+            <h1 class="logo">Md. Rayhan Chowdhury</h1>
+            <div class="menu-toggle">☰</div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h2>Projects</h2>
+    </header>
+
+    <section id="projects" class="section">
+        <div class="pdf-gallery">
+            <div class="pdf-preview">
+                <h4>Design Calculations (A4 Portrait)</h4>
+                <iframe id="scrolling-pdf" src="2A.Design_Report_0352 MODIFIED.pdf"></iframe>
+                <p><a href="2A.Design_Report_0352 MODIFIED.pdf" target="_blank" download>Download PDF</a></p>
+            </div>
+            <div class="pdf-preview">
+                <h4>Structural Drawings (A3 Landscape)</h4>
+                <iframe src="3.Detail structural and foundation design drawings _0352.pdf"></iframe>
+                <p><a href="3.Detail structural and foundation design drawings _0352.pdf" target="_blank" download>Download PDF</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu-items');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Auto-scroll first PDF
+        const pdfFrame = document.getElementById('scrolling-pdf');
+        pdfFrame.onload = function() {
+            let y = 0;
+            setInterval(() => {
+                pdfFrame.contentWindow.scrollTo(0, y);
+                y += 1;
+                if (y > pdfFrame.contentDocument.body.scrollHeight) y = 0;
+            }, 30);
+        };
+    </script>
+
+</body>
+</html>
