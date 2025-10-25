@@ -201,3 +201,22 @@ body {
         font-size: 0.9rem;
     }
 }
+/* Mobile view: screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-items {
+        flex-direction: column; /* stack menu items vertically */
+        width: 100%;
+        gap: 10px; /* smaller gap */
+        margin-top: 10px;
+    }
+
+    .menu-items a {
+        font-size: 0.95rem; /* slightly smaller text */
+    }
+}
+
