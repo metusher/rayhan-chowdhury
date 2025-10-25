@@ -30,9 +30,9 @@ body {
 .menu-items {
     list-style: none;
     display: flex;
-    flex-direction: row; /* keep items in a row */
-    flex-wrap: wrap;     /* wrap to next line if needed */
-    gap: 25px;           /* spacing between links */
+    flex-direction: row; /* horizontal menu */
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .menu-items a {
@@ -149,10 +149,11 @@ body {
     border: 1px solid #ddd;
 }
 
+/* ===== PDF Gallery ===== */
 .pdf-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex;          /* side-by-side layout */
+    flex-wrap: wrap;        /* wrap on smaller screens */
+    gap: 20px;              /* spacing between PDFs */
     justify-content: center;
     margin-top: 20px;
 }
@@ -162,7 +163,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
     padding: 15px;
-    width: 48%;
+    width: 48%;             /* two PDFs side-by-side on PC */
     text-align: center;
 }
 
@@ -216,6 +217,11 @@ body {
 
     #about .about-content img {
         width: 200px;
+    }
+
+    /* Stack PDFs vertically on mobile */
+    .pdf-preview {
+        width: 100%;
     }
 }
 
