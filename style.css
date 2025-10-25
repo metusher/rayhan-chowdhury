@@ -135,9 +135,10 @@ body {
 /* ===== Projects Page Design ===== */
 .pdf-gallery {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* changed */
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
     margin-top: 20px;
 }
 
@@ -146,7 +147,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
     padding: 15px;
-    width: 48%;
+    width: 48%; /* two PDFs side by side */
+    min-width: 300px; /* ensures clean layout */
     text-align: center;
 }
 
@@ -225,3 +227,4 @@ body {
         font-size: 1rem;
     }
 }
+
