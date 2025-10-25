@@ -120,6 +120,7 @@ body {
     text-align: justify;
 }
 
+/* ------------------- Video ------------------- */
 .video-container {
     text-align: center;
     margin-top: 20px;
@@ -131,6 +132,7 @@ body {
     height: 340px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 }
 
 
