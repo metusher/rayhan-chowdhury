@@ -84,10 +84,13 @@ body {
     content: "";
     display: block;
     width: 100%;       /* full-width underline */
-    height: 4px;
+    height: 2px;       /* chikon line */
     background-color: orange;
-    margin-top: 8px;   /* space below heading text */
-    border-radius: 2px;
+    margin-top: 8px;   /* text theke kichu space */
+    border-radius: 2px; /* smooth rounded edges */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* subtle shadow */
+}
+
 }
 
 /* ===== About Me Section ===== */
