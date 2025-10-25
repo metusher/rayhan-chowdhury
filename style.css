@@ -2,7 +2,7 @@
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     margin: 0;
-    background:  #1f1f1f;
+    background: #1f1f1f;
     color: #222;
 }
 
@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* prevent wrapping on all screens */
+    flex-wrap: wrap; /* allow wrapping if needed */
 }
 
 .logo {
@@ -30,13 +30,10 @@ body {
 .menu-items {
     list-style: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* always horizontal */
     gap: 20px;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap; /* keep menu in one row */
-    overflow-x: auto;  /* scroll horizontally if too long */
-    white-space: nowrap; /* prevent text break */
 }
 
 .menu-items a {
@@ -44,7 +41,6 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    padding: 5px 8px;
     transition: 0.3s;
 }
 
@@ -186,20 +182,24 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Keep nav menu horizontal on mobile */
+    /* Keep menu horizontal */
     .menu-container {
-        flex-wrap: nowrap; /* prevent wrapping */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     .menu-items {
-        gap: 10px;
-        flex-wrap: nowrap;   /* prevent wrapping */
-        overflow-x: auto;    /* scroll if too long */
-        white-space: nowrap; /* prevent text break */
+        flex-direction: row; /* horizontal */
+        gap: 10px; /* smaller gap */
+        flex-wrap: wrap; /* wrap if necessary */
+        width: auto;
+        margin-top: 0;
     }
 
     .menu-items a {
-        font-size: 0.85rem;  /* smaller text for mobile */
+        font-size: 0.85rem; /* smaller text */
     }
 
     .pdf-preview {
