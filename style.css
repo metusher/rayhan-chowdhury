@@ -13,29 +13,33 @@ body {
     padding: 10px 0;
 }
 
-@media screen and (max-width: 768px) {
-    .menu-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-items {
-        flex-direction: row;      /* keep horizontal */
-        flex-wrap: wrap;          /* wrap to next line if needed */
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .menu-items a {
-        font-size: 0.95rem;      /* slightly smaller text for mobile */
-    }
+.menu-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* always horizontal */
 }
 
+.logo {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    flex-direction: row; /* keep items in a row */
+    flex-wrap: wrap;     /* wrap to next line if needed */
+    gap: 25px;           /* spacing between links */
+}
 
 .menu-items a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1rem;
     transition: 0.3s;
 }
 
@@ -73,7 +77,7 @@ body {
     padding-bottom: 8px;
 }
 
-/* ===== About Me Section Enhancement ===== */
+/* ===== About Me Section ===== */
 #about {
     padding: 60px 20px;
     max-width: 1000px;
@@ -121,6 +125,19 @@ body {
     object-fit: cover;
 }
 
+/* ===== YouTube Video ===== */
+.video-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.video-container iframe {
+    width: 80%;
+    max-width: 700px;
+    height: 400px;
+    border-radius: 8px;
+}
+
 /* ===== Projects Page Design ===== */
 .project {
     margin-bottom: 30px;
@@ -132,13 +149,6 @@ body {
     border: 1px solid #ddd;
 }
 
-.video-container iframe {
-    width: 100%;
-    height: 400px;
-    border-radius: 10px;
-}
-
-/* ===== PDF Gallery ===== */
 .pdf-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -180,44 +190,15 @@ body {
     text-decoration: underline;
 }
 
-.video-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.video-container iframe {
-    width: 80%;
-    max-width: 700px;
-    height: 400px;
-    border-radius: 8px;
-}
-
-/* ===== Responsive ===== */
+/* ===== Responsive Adjustments ===== */
 @media screen and (max-width: 768px) {
-    /* Navigation */
-    .menu-container {
-        flex-direction: column;
-    }
-
-    .menu-items {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    /* Sections */
     .section {
         width: 90%;
         padding: 20px;
     }
 
-    /* PDF / Video */
     .pdf-viewer {
         height: 350px;
-    }
-
-    .pdf-preview {
-        width: 100%;
     }
 
     .video-container iframe {
@@ -225,7 +206,6 @@ body {
         height: 250px;
     }
 
-    /* About Me adjustments */
     #about .about-content {
         gap: 20px;
     }
@@ -250,5 +230,13 @@ body {
 
     #about .about-content img {
         width: 180px;
+    }
+
+    .menu-items {
+        gap: 10px;
+    }
+
+    .menu-items a {
+        font-size: 0.9rem;
     }
 }
