@@ -131,7 +131,7 @@ body {
 }
 
 /* ===== Projects Page Design ===== */
-#projects h2::after {
+#projects h3::after {
     content: "";
     display: block;
     width: 60px;
