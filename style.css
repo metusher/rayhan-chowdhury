@@ -131,9 +131,17 @@ body {
 }
 
 /* ===== Projects Page Design ===== */
-.project {
-    margin-bottom: 30px;
+#projects h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: orange;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
+
+
 
 .pdf-viewer {
     width: 100%;
