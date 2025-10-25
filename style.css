@@ -86,11 +86,9 @@ body {
     width: 100%;       /* full-width underline */
     height: 2px;       /* chikon line */
     background-color: orange;
-    margin-top: 8px;   /* text theke kichu space */
-    border-radius: 2px; /* smooth rounded edges */
+    margin-top: 8px;   /* text-er niche space */
+    border-radius: 2px; /* smooth edges */
     box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* subtle shadow */
-}
-
 }
 
 /* ===== About Me Section ===== */
@@ -126,7 +124,7 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 800px; /* optional max width */
+    max-width: 700px; /* desktop max width */
     margin: 20px auto; /* center horizontally */
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
@@ -222,7 +220,7 @@ ul li {
         width: 100%;
     }
 
-    /* YouTube smaller on mobile */
+    /* YouTube full width on mobile */
     .video-container {
         max-width: 100%;
     }
