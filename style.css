@@ -153,6 +153,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: center;
+
+    /* Mobile scroll fix */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .pdf-preview h4 {
@@ -167,6 +171,10 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: auto;
+
+    /* Enable touch scroll on mobile */
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
 }
 
 /* Lists */
@@ -222,5 +230,10 @@ ul li {
 
     #about .about-content p {
         font-size: 1rem;
+    }
+
+    /* Optional: reduce PDF height on very small screens */
+    .pdf-preview iframe {
+        height: 300px;
     }
 }
