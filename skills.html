@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills - Md. Rayhan Chowdhury</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
+    /* Base layout assumed same as projects section */
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
       background: #f8f9fb;
       color: #222;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Navbar */
     nav.menu {
       background: #111;
       color: #fff;
@@ -23,7 +23,7 @@
 
     .menu-container {
       width: 90%;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       display: flex;
       justify-content: space-between;
@@ -54,57 +54,72 @@
       color: #00bfff;
     }
 
-    /* Section */
+    /* Section layout like project cards */
     .section {
       width: 90%;
-      max-width: 900px;
+      max-width: 1100px;
       margin: 2rem auto;
       text-align: center;
     }
 
     h2 {
       font-size: 2rem;
+      margin-bottom: 2rem;
       color: #111;
-      margin-bottom: 1rem;
     }
 
-    /* Skill Bar */
-    .skill {
-      margin: 1rem 0;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
       text-align: left;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .skill-name {
       font-weight: 600;
-      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #111;
     }
 
     .skill-bar {
       width: 100%;
-      height: 12px;
-      background: #ddd;
-      border-radius: 6px;
+      height: 10px;
+      background: #e4e4e4;
+      border-radius: 5px;
       overflow: hidden;
+      margin-bottom: 1rem;
     }
 
     .skill-fill {
       height: 100%;
       width: 0;
       background: linear-gradient(90deg, #007bff, #00bfff);
-      border-radius: 6px;
+      border-radius: 5px;
       animation: fillAnimation 2s forwards;
     }
 
-    /* Animation */
     @keyframes fillAnimation {
       from { width: 0; }
       to { width: var(--skill-level); }
     }
 
-    /* Video Section */
+    /* Video */
     .video-container {
-      margin-top: 2.5rem;
-      text-align: center;
+      margin-top: 3rem;
     }
 
     iframe {
@@ -115,9 +130,9 @@
       border: none;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-
   </style>
 </head>
+
 <body>
   <nav class="menu">
     <div class="menu-container">
@@ -135,30 +150,36 @@
 
   <section class="section">
     <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-name">ETABS</div>
+        <div class="skill-bar"><div class="skill-fill" style="--skill-level: 90%;"></div></div>
+        <p>Structural analysis, design, and modeling of high-rise buildings using ETABS.</p>
+      </div>
 
-    <div class="skill">
-      <div class="skill-name">ETABS</div>
-      <div class="skill-bar"><div class="skill-fill" style="--skill-level: 90%;"></div></div>
-    </div>
+      <div class="skill-card">
+        <div class="skill-name">AutoCAD</div>
+        <div class="skill-bar"><div class="skill-fill" style="--skill-level: 85%;"></div></div>
+        <p>2D drafting and structural detailing for civil and architectural projects.</p>
+      </div>
 
-    <div class="skill">
-      <div class="skill-name">AutoCAD</div>
-      <div class="skill-bar"><div class="skill-fill" style="--skill-level: 85%;"></div></div>
-    </div>
+      <div class="skill-card">
+        <div class="skill-name">Abaqus</div>
+        <div class="skill-bar"><div class="skill-fill" style="--skill-level: 80%;"></div></div>
+        <p>Finite element modeling, simulation, and non-linear structural analysis.</p>
+      </div>
 
-    <div class="skill">
-      <div class="skill-name">Abaqus</div>
-      <div class="skill-bar"><div class="skill-fill" style="--skill-level: 80%;"></div></div>
-    </div>
+      <div class="skill-card">
+        <div class="skill-name">OpenSeesPy</div>
+        <div class="skill-bar"><div class="skill-fill" style="--skill-level: 75%;"></div></div>
+        <p>Python-based finite element analysis for seismic performance and SHM studies.</p>
+      </div>
 
-    <div class="skill">
-      <div class="skill-name">OpenSeesPy</div>
-      <div class="skill-bar"><div class="skill-fill" style="--skill-level: 75%;"></div></div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-name">Machine Learning (Python)</div>
-      <div class="skill-bar"><div class="skill-fill" style="--skill-level: 70%;"></div></div>
+      <div class="skill-card">
+        <div class="skill-name">Machine Learning (Python)</div>
+        <div class="skill-bar"><div class="skill-fill" style="--skill-level: 70%;"></div></div>
+        <p>Data-driven modeling and deep learning for seismic drift prediction and SHM.</p>
+      </div>
     </div>
 
     <div class="video-container">
