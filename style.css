@@ -19,7 +19,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row; /* always horizontal */
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -30,9 +31,9 @@ body {
 .menu-items {
     list-style: none;
     display: flex;
-    flex-direction: row; /* horizontal menu */
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 20px;
 }
 
 .menu-items a {
@@ -51,7 +52,7 @@ body {
 /* ===== Header ===== */
 .header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
     background: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -59,12 +60,13 @@ body {
 .header h2 {
     font-size: 1.3rem;
     line-height: 1.5;
+    margin: 0;
 }
 
 /* ===== Section Styling ===== */
 .section {
     width: 80%;
-    margin: 40px auto;
+    margin: 20px auto; /* reduced from 40px */
     background: white;
     padding: 30px;
     border-radius: 10px;
@@ -79,7 +81,7 @@ body {
 
 /* ===== About Me Section ===== */
 #about {
-    padding: 60px 20px;
+    padding: 20px 20px; /* reduced from 60px */
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -88,7 +90,7 @@ body {
     font-size: 2rem;
     text-align: center;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #about h2::after {
@@ -105,7 +107,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -120,7 +122,7 @@ body {
 /* ===== YouTube Video ===== */
 .video-container {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .video-container iframe {
@@ -131,7 +133,6 @@ body {
 }
 
 /* ===== Projects Page Design ===== */
-
 .pdf-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -173,50 +174,50 @@ body {
     text-decoration: underline;
 }
 
-.video-container {
-    text-align: center;
-    margin-top: 20px;
+/* ===== Responsive adjustments ===== */
+@media (max-width: 1024px) {
+    #about .about-content {
+        gap: 20px;
+    }
 }
 
-.video-container iframe {
-    width: 80%;
-    max-width: 700px;
-    height: 400px;
-    border-radius: 8px;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .pdf-preview {
-        width: 100%;
-    }
-    .video-container iframe {
-        width: 100%;
-        height: 250px;
-    }
-}
-
-
-    .menu-items a {
-        font-size: 0.9rem;
-    }
-}
-/* Mobile view: screens smaller than 768px */
-@media screen and (max-width: 768px) {
     .menu-container {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .menu-items {
-        flex-direction: column; /* stack menu items vertically */
+        flex-direction: column;
         width: 100%;
-        gap: 10px; /* smaller gap */
+        gap: 10px;
         margin-top: 10px;
     }
 
     .menu-items a {
-        font-size: 0.95rem; /* slightly smaller text */
+        font-size: 0.95rem;
+    }
+
+    .pdf-preview {
+        width: 100%;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 250px;
     }
 }
 
+@media (max-width: 480px) {
+    .header h2 {
+        font-size: 1.1rem;
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+    }
+
+    #about .about-content p {
+        font-size: 1rem;
+    }
+}
