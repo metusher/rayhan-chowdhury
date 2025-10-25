@@ -78,17 +78,15 @@ body {
     position: relative;
     padding-bottom: 8px;
     margin-bottom: 20px;
-    text-align: center; /* center text */
 }
 
 .section h2::after {
     content: "";
     display: block;
-    width: 60px;
-    max-width: 30%; /* responsive underline */
+    width: 100%;       /* full-width underline */
     height: 4px;
     background-color: orange;
-    margin: 8px auto 0; /* center underline */
+    margin-top: 8px;   /* space below heading text */
     border-radius: 2px;
 }
 
