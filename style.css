@@ -1,13 +1,77 @@
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    margin: 0;
-    background: #f9f9f9;
-    color: #222;
+/* About Me Section Enhancement */
+#about {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Navigation Bar */
-.menu {
-    background: #1a1a1a;
+#about h2 {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#about h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: orange;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Flex layout for paragraph + image (optional) */
+#about .about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#about .about-content p {
+    flex: 1 1 400px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+}
+
+#about .about-content img {
+    flex: 0 0 250px;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about .about-content {
+        gap: 20px;
+    }
+    #about .about-content p {
+        font-size: 1rem;
+    }
+    #about .about-content img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about .about-content {
+        gap: 15px;
+    }
+    #about .about-content p {
+        font-size: 0.95rem;
+    }
+    #about .about-content img {
+        width: 180px;
+    }
+}
+
     color: white;
     padding: 10px 0;
 }
