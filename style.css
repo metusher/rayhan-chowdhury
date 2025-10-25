@@ -143,21 +143,30 @@ body {
 
 /* ===== PDF Gallery ===== */
 .pdf-gallery {
-    display: flex;          /* side-by-side layout */
-    flex-wrap: wrap;        /* wrap on smaller screens */
-    gap: 20px;              /* spacing between PDFs */
+    display: flex;
+    flex-wrap: wrap;        /* wrap only if screen is extremely narrow */
+    gap: 20px;
     justify-content: center;
     margin-top: 20px;
 }
 
 .pdf-preview {
+    width: 48%;             /* keep two PDFs side-by-side always */
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
     padding: 15px;
-    width: 48%;             /* two PDFs side-by-side on PC */
     text-align: center;
+    min-width: 250px;       /* prevent too small on very small screens */
 }
+
+/* Remove previous mobile width override */
+/* @media screen and (max-width: 768px) {
+    .pdf-preview {
+        width: 100%;  <-- remove this line
+    }
+} */
+
 
 .pdf-preview iframe {
     width: 100%;
