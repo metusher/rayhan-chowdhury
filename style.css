@@ -117,14 +117,6 @@ body {
     text-align: justify;
 }
 
-#about .about-content img {
-    flex: 0 0 250px;
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
 /* ===== YouTube Video ===== */
 .video-container {
     text-align: center;
