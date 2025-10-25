@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* allow wrapping if needed */
+    flex-wrap: nowrap; /* keep all items in one row */
 }
 
 .logo {
@@ -30,22 +30,26 @@ body {
 .menu-items {
     list-style: none;
     display: flex;
-    flex-direction: row; /* always horizontal */
-    gap: 20px;
+    flex-direction: row;
+    gap: 15px;
     margin: 0;
     padding: 0;
+    flex-wrap: nowrap; /* prevent wrapping */
+    overflow-x: auto;  /* horizontal scroll on small screens */
+    white-space: nowrap; /* prevent line breaks */
 }
 
-.menu-items a {
+.menu-items li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
+    padding: 5px 8px;
     transition: 0.3s;
 }
 
-.menu-items a:hover,
-.menu-items a.active {
+.menu-items li a:hover,
+.menu-items li a.active {
     color: #f5c518;
 }
 
@@ -182,24 +186,20 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Keep menu horizontal */
+    /* Keep nav menu horizontal on mobile */
     .menu-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap; 
+        flex-wrap: nowrap; /* prevent wrapping */
     }
 
     .menu-items {
-        flex-direction: row; /* horizontal */
-        gap: 10px;           /* smaller gap */
-        flex-wrap: wrap;     /* wrap if necessary */
-        width: auto;
-        margin-top: 0;
+        gap: 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .menu-items a {
-        font-size: 0.85rem;  /* smaller text */
+        font-size: 0.85rem;
     }
 
     .pdf-preview {
