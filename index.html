@@ -1,59 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Rayhan Chowdhury - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Rayhan Chowdhury - Home</title>
+  <style>
+    /* ===== GENERAL STYLES ===== */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fb;
+      color: #222;
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav.menu {
+      background: #111;
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    .menu-container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .menu-items {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-items li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+
+    .menu-items li a:hover,
+    .menu-items li a.active {
+      color: #FFA500; /* light orange */
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #111;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    /* 🔶 Light orange underline below h2 */
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 60px;
+      height: 4px;
+      background: #FFA500; /* light orange */
+      border-radius: 2px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #444;
+      text-align: justify;
+    }
+
+    /* ===== VIDEO SECTION ===== */
+    .video-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 400px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .section {
+        padding: 1.5rem;
+      }
+
+      .video-container iframe {
+        height: 280px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="menu">
-        <div class="menu-container">
-            <h1 class="logo">Md. Rayhan Chowdhury</h1>
-            <ul class="menu-items">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="menu">
+    <div class="menu-container">
+      <h1 class="logo">Md. Rayhan Chowdhury</h1>
+      <ul class="menu-items">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Header -->
-    <header class="header">
-        <h2>Structural Engineer | Research Enthusiast | B.Sc. Civil Engineering</h2>
-    </header>
+  <!-- ===== HEADER ===== -->
+  <header class="section">
+    <h2>Structural Engineer | Research Enthusiast | B.Sc. Civil Engineering</h2>
+  </header>
 
-    <!-- About Me -->
-   <!-- About Me -->
-<section  class="section">
+  <!-- ===== ABOUT ME ===== -->
+  <section class="section">
     <h2>About Me</h2>
     <div class="about-content">
-        <p>
-            I am a Civil Engineering graduate from Sylhet Engineering College (affiliated with Shahjalal University of Science and Technology – SUST), 
-            with a CGPA of 3.36/4.00. I specialize in structural engineering, focusing on finite element modeling (FEM), Structural Health Monitoring (SHM), 
-            seismic risk analysis, and material behavior analysis. I am proficient in Abaqus and Python, using these tools for data-driven simulations 
-            and advanced structural analysis. 
-        </p>
-        
+      <p>
+        I am a Civil Engineering graduate from Sylhet Engineering College (affiliated with Shahjalal University of Science and Technology – SUST), 
+        with a CGPA of 3.36/4.00. I specialize in structural engineering, focusing on finite element modeling (FEM), Structural Health Monitoring (SHM), 
+        seismic risk analysis, and material behavior analysis. I am proficient in Abaqus and Python, using these tools for data-driven simulations 
+        and advanced structural analysis.
+      </p>
     </div>
 
     <!-- YouTube Video -->
     <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/watch?v=snNEr_d2yWg" 
-            title="YouTube video" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+      <iframe 
+        src="https://www.youtube.com/embed/snNEr_d2yWg" 
+        title="YouTube video" 
+        loading="lazy" 
+        allowfullscreen>
+      </iframe>
     </div>
-</section>
-
+  </section>
 
 </body>
 </html>
