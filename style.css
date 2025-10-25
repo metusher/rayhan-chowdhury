@@ -78,15 +78,17 @@ body {
     position: relative;
     padding-bottom: 8px;
     margin-bottom: 20px;
+    text-align: center; /* center text */
 }
 
 .section h2::after {
     content: "";
     display: block;
     width: 60px;
+    max-width: 30%; /* responsive underline */
     height: 4px;
     background-color: orange;
-    margin: 10px auto 0;
+    margin: 8px auto 0; /* center underline */
     border-radius: 2px;
 }
 
@@ -123,9 +125,10 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    max-width: 800px; /* optional max width */
+    margin: 20px auto; /* center horizontally */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
-    margin-top: 20px;
 }
 
 .video-container iframe {
@@ -153,6 +156,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: center;
+
+    /* Mobile scroll fix */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .pdf-preview h4 {
@@ -167,6 +174,10 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: auto;
+
+    /* Enable touch scroll on mobile */
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
 }
 
 /* Lists */
@@ -209,6 +220,11 @@ ul li {
     .pdf-preview {
         width: 100%;
     }
+
+    /* YouTube smaller on mobile */
+    .video-container {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -222,5 +238,10 @@ ul li {
 
     #about .about-content p {
         font-size: 1rem;
+    }
+
+    /* Optional: reduce PDF height for very small screens */
+    .pdf-preview iframe {
+        height: 300px;
     }
 }
