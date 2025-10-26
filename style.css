@@ -65,33 +65,39 @@ body {
 
 /* ===== Section Styling ===== */
 .section {
-    width: 80%;
-    margin: 20px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+  width: 80%;
+  margin: 20px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}   /* ← এখানে missing বন্ধনিটি ছিল */
 
+/* ===== Section Heading Underline ===== */
 .section h2 {
-    /* Remove underline from all by default */
-    position: relative;
-    padding-bottom: 0;
-    margin-bottom: 20px;
+  color: #111;
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  display: inline-block; /* underline টা ঠিকমতো দেখাবে */
 }
 
-.section h2.underline::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: orange;
-    margin-top: 8px;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+.section h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ff8c00; /* orange underline */
+  margin-top: 6px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
+/* ===== Optional: No underline for some headings ===== */
+.no-underline::after {
+  display: none;
 }
+
 
 /* ===== About Me Section ===== */
 #about {
