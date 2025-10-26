@@ -86,34 +86,7 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-/* ===== About Me Section ===== */
-#about {
-    padding: 10px 0; /* gap কমানো হয়েছে */
-    max-width: 1000px;
-    margin: 0 auto;
-}
 
-#about h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px; /* gap কমানো */
-}
-
-#about .about-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px; /* gap কমানো */
-    flex-wrap: wrap;
-}
-
-#about .about-content p {
-    flex: 1 1 400px;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #333;
-    text-align: justify;
-}
 
 /* ------------------- Video ------------------- */
 .video-container {
