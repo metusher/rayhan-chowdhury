@@ -1,50 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Rayhan Chowdhury - Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awards - Md. Rayhan Chowdhury</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fb;
+      color: #222;
+    }
+.logo {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0;
+    
+
+   }
+ .menu-items {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      margin: 0;
+    }
+
+    .menu-items li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .menu-items li a:hover,
+    .menu-items li a.active {
+      color:  #ff8c00;
+    }
+    
+
+    
+    
+    
+
+    
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation Menu -->
-    <nav class="menu">
-        <div class="menu-container">
-            <h1 class="logo">Md. Rayhan Chowdhury</h1>
-            <div class="menu-toggle">☰</div>
-            <ul class="menu-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="menu">
+    <div class="menu-container">
+      <h1 class="logo">Md. Rayhan Chowdhury</h1>
+      <ul class="menu-items">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Header -->
-    <header class="header">
-        <h2>Contact Me</h2>
-    </header>
+ 
+  
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile" target="_blank">https://www.linkedin.com/in/your-profile</a></p>
-        <p><strong>Phone:</strong> +880-XXXXXXXXXX</p>
-        <p><strong>Location:</strong> Dhaka, Bangladesh</p>
-    </section>
 
-    <script>
-        const toggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu-items');
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+    <!-- ===== CONTACT ===== -->
+  <section class="section" style="text-align: center;">
+    <h2 style="color: #000000; font-size: 1.8rem; margin-bottom: 1rem;">Contact</h2>
+
+    <!-- Logo / Name -->
+    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+      Md. Rayhan Chowdhury
+    </h3>
+    <p style="margin: 0; font-weight: 500;">Structural Engineer | Research Enthusiast</p>
+    <p style="margin: 0.3rem 0 1rem;">Uttara, Dhaka-1230, Bangladesh</p>
+
+    <!-- Contact Info -->
+    <p><strong>Email:</strong> 
+      <a href="mailto:rayhansec@gmail.com" style="color:#1a1a1a; text-decoration:none;">
+        rayhansec@gmail.com
+      </a>
+    </p>
+    <p><strong>Phone:</strong> 
+      <a href="tel:+8801851407272" style="color:#1a1a1a; text-decoration:none;">
+        +880 185 140 7272
+      </a>
+    </p>
+
+    <p><strong>LinkedIn:</strong> 
+      <a href="https://www.linkedin.com/in/md-rayhan-chowdhury-59011a368" target="_blank" style="color:#ff8c00; text-decoration:none;">
+        View Profile
+      </a>
+    </p>
+
+    <p><strong>Portfolio:</strong> 
+      <a href="https://metusher.github.io/rayhan-chowdhury/" target="_blank" style="color:#ff8c00; text-decoration:none;">
+        metusher.github.io/rayhan-chowdhury
+      </a>
+    </p>
+
+    <!-- CV Download Button -->
+    <a href="3rd_resume (3).pdf" download class="cv-btn" 
+       style="
+         display: inline-block;
+         margin-top: 1.2rem;
+         background: #ff8c00;
+         color: white;
+         padding: 0.6rem 1.4rem;
+         border-radius: 30px;
+         text-decoration: none;
+         font-weight: 600;
+         transition: 0.3s;
+       "
+       onmouseover="this.style.background='#e67e00';"
+       onmouseout="this.style.background='#ff8c00';">
+      📄 Download CV
+    </a>
+  </section>
+
+
 
 </body>
 </html>
