@@ -6,12 +6,12 @@ body {
     color: #222;
 }
 
-/* ===== Navigation Bar ===== */
-.menu {
-    background: #1a1a1a;
-    color: white;
-    padding: 0.5rem 0;
-}
+/* ===== NAVIGATION ===== */
+    nav.menu {
+      background: #111;
+      color: #fff;
+      padding: 1rem 0;
+    }
 
 .menu-container {
     width: 90%;
