@@ -1,36 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Md. Rayhan Chowdhury</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research - Md. Rayhan Chowdhury</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fb;
+      color: #222;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .menu {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    
+    
+
+    .menu-items {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      margin: 0;
+    }
+
+    .menu-items li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .menu-items li a:hover,
+    .menu-items li a.active {
+      color: #ff8c00;
+    }
+
+    .section {
+      width: 90%;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      color: #ff8c00;
+    }
+
+    .research-list {
+      list-style: disc;
+      margin-left: 1.5rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .menu-container {
+        flex-direction: column;
+      }
+      .menu-items {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<nav class="menu">
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="menu">
     <div class="menu-container">
-        <h1 class="logo">Md. Rayhan Chowdhury</h1>
-        <ul class="menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="awards.html">Awards</a></li>
-            <li><a href="research.html" class="active">Research</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <h1 class="logo">Md. Rayhan Chowdhury</h1>
+      <ul class="menu-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-</nav>
+  </nav>
 
-<section class="section">
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Structural Health Monitoring (SHM)</li>
-        <li>Seismic Risk Analysis & Time History Response</li>
-        <li>Finite Element Modelling (FEM)</li>
-        <li>Machine Learning for Structural Prediction</li>
+  <!-- ===== RESEARCH WORK ===== -->
+  <section class="section">
+    <h2>Research Work</h2>
+    <ul class="research-list">
+      <li><strong>Undergraduate Thesis:</strong> Data-Driven Prediction of Seismic Drift Responses Using Deep Neural Networks (DNNs)</li>
+      <li><strong>Conference Paper:</strong> Use of Time History Analysis of Steel Frame for Enhancing Structural Health Monitoring (ICERIE 2025)</li>
     </ul>
-</section>
+  </section>
 
 </body>
 </html>
