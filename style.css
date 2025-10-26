@@ -28,7 +28,7 @@ body {
       display: flex;
       gap: 0.8rem;
       margin: 0;
-      padding: 20px;
+      padding: 0px;
     }
 
     .menu-items li a {
